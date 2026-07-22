@@ -1,0 +1,168 @@
+/* =========================================================
+   IMA — Feuille de style globale
+   Design tokens (variables CSS) + reset + classes partagées.
+   Les styles spécifiques à chaque section vivent dans le
+   composant correspondant (src/lib/components/*.svelte).
+   ========================================================= */
+
+:root {
+	/* Couleurs de marque */
+	--navy: #0f3b54;
+	--navy-deep: #0a2c40;
+	--teal: #2f757f;
+	--teal-light: #4f97a0;
+	--sage: #7e9c80;
+	--gold: #c2a05a;
+	--gold-soft: #d6b87e;
+	--cream: #f6f1e7;
+	--paper: #fbf9f3;
+	--ink: #16313f;
+	--ink-soft: #4a5a64;
+	--line: rgba(15, 59, 84, 0.13);
+
+	/* Typographie */
+	--display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+	--body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--serif: 'Fraunces', Georgia, serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body);
+	color: var(--ink);
+	background: var(--paper);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ---- Utilitaires de mise en page ---- */
+.wrap {
+	width: min(1140px, 92vw);
+	margin-inline: auto;
+}
+
+.band {
+	padding: clamp(4rem, 9vw, 7rem) 0;
+}
+
+/* Sous-pages : la première section démarre sous la navigation fixe.
+   (L'accueil n'utilise pas .page — c'est le Hero pleine hauteur qui gère l'espace.) */
+.page > .band:first-child {
+	padding-top: clamp(6.5rem, 11vw, 9rem);
+}
+
+/* Ancre de défilement : évite qu'un titre visé par un lien #hash passe sous la nav. */
+:target {
+	scroll-margin-top: 5rem;
+}
+
+/* ---- Titres de section ---- */
+.eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	font-size: 0.73rem;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--teal);
+	margin-bottom: 1.05rem;
+}
+.eyebrow::before {
+	content: '✦';
+	color: var(--gold);
+	font-size: 0.7rem;
+}
+
+.h2 {
+	font-family: var(--display);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.015em;
+	font-size: clamp(1.8rem, 3.8vw, 2.85rem);
+	color: var(--navy);
+}
+
+.lead {
+	font-size: 1.1rem;
+	color: var(--ink-soft);
+	max-width: 62ch;
+	margin-top: 1.1rem;
+}
+
+/* ---- Boutons ---- */
+.btn {
+	font-family: var(--display);
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	padding: 0.85rem 1.55rem;
+	border-radius: 999px;
+	cursor: pointer;
+	border: 0;
+	font-size: 0.93rem;
+	transition:
+		transform 0.2s,
+		box-shadow 0.2s,
+		background 0.2s;
+	display: inline-block;
+}
+.btn--gold {
+	background: var(--gold);
+	color: var(--navy-deep);
+}
+.btn--gold:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 30px -12px rgba(194, 160, 90, 0.7);
+}
+.btn--ghost {
+	background: transparent;
+	color: var(--navy);
+	border: 1.5px solid var(--navy);
+}
+.btn--ghost:hover {
+	background: var(--navy);
+	color: #fff;
+	transform: translateY(-2px);
+}
+.btn--navy {
+	background: var(--navy);
+	color: #fff;
+}
+.btn--navy:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 30px -12px rgba(20, 48, 74, 0.6);
+}
+
+/* ---- Marqueur de contenu à compléter ---- */
+.ph {
+	color: var(--gold);
+	font-weight: 600;
+	background: rgba(198, 164, 92, 0.12);
+	padding: 0 0.25rem;
+	border-radius: 4px;
+}
+
+/* ---- Accessibilité : préférence de mouvement réduit ---- */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+	}
+}

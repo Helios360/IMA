@@ -1,0 +1,332 @@
+{
+	"org": {
+		"name": "IMA — Institut des Métiers de l'Accompagnement",
+		"shortName": "IMA",
+		"tagline": "Métiers de l'accompagnement",
+		"baseline": "Accompagner chaque étape de la vie",
+		"contactName": "Anouchka Blanchard",
+		"contactRole": "Chargée de Relations Entreprises",
+		"email": "a.blanchard@skalys-bs.fr",
+		"phone": "+33687126937",
+		"phoneDisplay": "06 87 12 69 37",
+		"address": {
+			"street": "8, avenue Flandres Dunkerque",
+			"postalCode": "60200",
+			"city": "Compiègne"
+		},
+		"campuses": ["Compiègne", "Senlis", "Chantilly"],
+		"legal": {
+			"siret": "[à compléter]",
+			"nda": "[NDA]",
+			"qualiopiCertNumber": "[à compléter]",
+			"qualiopiCertifier": "[organisme certificateur]"
+		}
+	},
+	"stats": [
+		{ "num": "4", "label": "formations diplômantes et certifiantes" },
+		{ "num": "3", "label": "campus dans l'Oise" },
+		{ "num": "Qualiopi", "label": "certification qualité des prestations" }
+	],
+	"stages": [
+		{
+			"mod": "enfance",
+			"age": "Petite enfance",
+			"title": "Les premiers pas",
+			"text": "Éveil, sécurité affective et soins du quotidien auprès des 0–6 ans, en structure d'accueil ou à domicile."
+		},
+		{
+			"mod": "personne",
+			"age": "Services à la personne",
+			"title": "Au cœur du quotidien",
+			"text": "Aide à domicile, autonomie et soutien aux personnes là où elles vivent, dans le respect de leurs habitudes."
+		},
+		{
+			"mod": "age",
+			"age": "Grand âge",
+			"title": "La dignité, jusqu'au bout",
+			"text": "Accompagner nos aînés en EHPAD ou à domicile, en préservant leur confort, leur lien social et leur autonomie."
+		}
+	],
+	"model": [
+		{
+			"n": "01",
+			"title": "On vous forme",
+			"text": "Une formation diplômante et concrète, construite avec les professionnels du secteur et alternant théorie et terrain."
+		},
+		{
+			"n": "02",
+			"title": "On vous accompagne",
+			"text": "Un suivi individuel : positionnement, tutorat, stages et préparation aux examens comme à l'entrée dans l'emploi."
+		},
+		{
+			"n": "03",
+			"title": "On vous emploie",
+			"text": "Des débouchés réels avec nos structures partenaires. Le diplôme n'est pas une fin : c'est votre premier contrat."
+		}
+	],
+	"financing": [
+		"CPF",
+		"France Travail",
+		"OPCO",
+		"Région Hauts-de-France",
+		"Employeur",
+		"Financement personnel"
+	],
+	"recruitment": {
+		"eyebrow": "Recrutement · Rentrée 2026",
+		"count": "20",
+		"countLabel": "postes à pourvoir",
+		"diplomaShort": "CAP AEPE",
+		"diplomaLong": "Accompagnant Éducatif Petite Enfance — diplôme d'État niveau 3 · RNCP 38565"
+	},
+	"links": {
+		"franceCompetences": "https://www.francecompetences.fr/",
+		"rncpSearch": "https://www.francecompetences.fr/recherche_rncp/",
+		"qualiopi": "https://travail-emploi.gouv.fr/la-certification-qualiopi",
+		"cpf": "https://www.moncompteformation.gouv.fr/",
+		"franceTravail": "https://www.francetravail.fr/",
+		"regionHdf": "https://www.hautsdefrance.fr/aides-formation/",
+		"agefiph": "https://www.agefiph.fr/",
+		"monParcoursHandicap": "https://www.monparcourshandicap.gouv.fr/",
+		"onisep": "https://www.onisep.fr/",
+		"qualiopiReferentiel": "https://travail-emploi.gouv.fr/le-referentiel-national-qualite"
+	},
+	"formations": [
+		{
+			"id": "aepe",
+			"rncp": "38565",
+			"rncpUrl": "https://www.francecompetences.fr/recherche/rncp/38565/",
+			"tabDomain": "Petite enfance",
+			"tabLabel": "CAP AEPE",
+			"domain": "Petite enfance",
+			"title": "CAP Accompagnant Éducatif Petite Enfance",
+			"meta": ["Diplôme d'État", "Niveau 3 (CAP)", "RNCP 38565", "Code NSF 332"],
+			"fields": [
+				{
+					"label": "Objectifs",
+					"full": true,
+					"html": "Accompagner le développement du jeune enfant de 0 à 6 ans : assurer les soins du quotidien, contribuer à son éveil, sa socialisation et sa sécurité affective, en structure collective ou à domicile."
+				},
+				{
+					"label": "Public visé",
+					"html": "Toute personne souhaitant travailler auprès du jeune enfant : reconversion, demandeurs d'emploi, jeunes de 16 ans et plus."
+				},
+				{
+					"label": "Prérequis",
+					"html": "Aucun diplôme requis. Bonne maîtrise du français. Entretien de motivation. Permis B + véhicule pour les postes en alternance."
+				},
+				{
+					"label": "Durée &amp; rythme",
+					"html": "Cursus généralement de 10 à 12 mois en alternance. Enseignement des 3 blocs professionnels + périodes de formation en milieu professionnel d'au moins 14 semaines. Le volume horaire exact dépend du parcours et des dispenses (domaines généraux). Entrée en septembre."
+				},
+				{
+					"label": "Modalités pédagogiques",
+					"html": "Cours en présentiel, mises en situation professionnelle, périodes de formation en milieu professionnel (PFMP)."
+				},
+				{
+					"label": "Modalités &amp; délais d'accès",
+					"html": "Inscription sur dossier + entretien, jusqu'à <span class=\"ph\">[X]</span> jours avant le démarrage, dans la limite des places disponibles."
+				},
+				{
+					"label": "Évaluation &amp; validation",
+					"html": "Épreuves professionnelles et générales (selon dispenses) menant au diplôme d'État CAP AEPE. Validation possible par blocs."
+				},
+				{
+					"label": "Débouchés &amp; suites de parcours",
+					"html": "Crèche, micro-crèche, école maternelle (ATSEM via concours), garde à domicile, MAM. Poursuite possible vers le DEAES ou le DE Auxiliaire de puériculture."
+				},
+				{
+					"label": "Tarif &amp; financement",
+					"html": "Sur devis. Éligible CPF, France Travail, OPCO, Région, financement employeur ou personnel."
+				},
+				{
+					"label": "Accessibilité handicap",
+					"html": "Locaux et parcours adaptables. Contactez notre référent handicap pour étudier votre situation : <span class=\"ph\">[contact]</span>."
+				},
+				{
+					"label": "Certification &amp; enregistrement RNCP",
+					"full": true,
+					"html": "<strong>RNCP 38565</strong> · Niveau 3 · Code NSF 332 · Certificateur : Ministère de l'Éducation nationale et de la Jeunesse · Enregistré le 22/01/2024, échéance le 31/12/2028 (arrêté du 30/11/2020)."
+				}
+			],
+			"footnote": "Indicateurs de résultats de la session <span class=\"ph\">[année]</span>, mis à jour chaque année."
+		},
+		{
+			"id": "deaes",
+			"rncp": "36004",
+			"rncpUrl": "https://www.francecompetences.fr/recherche/rncp/36004/",
+			"tabDomain": "Médico-social",
+			"tabLabel": "DEAES",
+			"domain": "Médico-social",
+			"title": "DEAES — Accompagnant Éducatif et Social",
+			"meta": ["Diplôme d'État", "Niveau 3", "RNCP 36004", "5 blocs"],
+			"fields": [
+				{
+					"label": "Objectifs",
+					"full": true,
+					"html": "Accompagner des personnes en situation de handicap ou de dépendance dans les actes essentiels de la vie quotidienne, le maintien du lien social et le développement de l'autonomie — à domicile, en établissement ou en milieu scolaire."
+				},
+				{
+					"label": "Public visé",
+					"html": "Reconversion professionnelle, demandeurs d'emploi, salariés du secteur médico-social souhaitant se qualifier."
+				},
+				{
+					"label": "Prérequis",
+					"html": "Aucun diplôme exigé. Sélection sur dossier et entretien. Aptitude à l'accompagnement vérifiée au positionnement."
+				},
+				{
+					"label": "Durée &amp; rythme",
+					"html": "Référentiel 2021 : environ 567 h de formation théorique + 840 h de formation pratique (stages), soit ≈ 1 407 h, en alternance et réparties sur les 5 domaines de formation."
+				},
+				{
+					"label": "Modalités pédagogiques",
+					"html": "Présentiel, ateliers pratiques, analyses de situations, stages encadrés par un tuteur."
+				},
+				{
+					"label": "Modalités &amp; délais d'accès",
+					"html": "Sessions à la rentrée. Inscription jusqu'à <span class=\"ph\">[X]</span> semaines avant le démarrage."
+				},
+				{
+					"label": "Évaluation &amp; validation",
+					"html": "Validation par blocs de compétences, menant au Diplôme d'État d'Accompagnant Éducatif et Social."
+				},
+				{
+					"label": "Débouchés &amp; suites de parcours",
+					"html": "Aide à domicile, foyer de vie, MAS/FAM, AESH en milieu scolaire. Poursuite vers le DE Aide-soignant ou le DE Moniteur-éducateur."
+				},
+				{
+					"label": "Tarif &amp; financement",
+					"html": "Sur devis. Éligible CPF, France Travail, OPCO, Région, financement employeur ou personnel."
+				},
+				{
+					"label": "Accessibilité handicap",
+					"html": "Parcours adaptable, référent handicap dédié : <span class=\"ph\">[contact]</span>."
+				},
+				{
+					"label": "Certification &amp; enregistrement RNCP",
+					"full": true,
+					"html": "<strong>RNCP 36004</strong> · Niveau 3 · Certificateur : Ministère chargé des solidarités · 5 blocs de compétences · 3 spécialités (vie à domicile, structure collective, éducation inclusive) · Enregistré le 01/09/2021, échéance le 01/09/2026 (arrêté du 30/08/2021)."
+				}
+			],
+			"footnote": "Indicateurs de résultats de la session <span class=\"ph\">[année]</span>, mis à jour chaque année."
+		},
+		{
+			"id": "advf",
+			"rncp": "37715",
+			"rncpUrl": "https://www.francecompetences.fr/recherche/rncp/37715/",
+			"tabDomain": "Domicile",
+			"tabLabel": "Titre Pro ADVF",
+			"domain": "Services à domicile",
+			"title": "Titre Pro — Assistant De Vie aux Familles",
+			"meta": ["Titre professionnel", "Niveau 3", "RNCP 37715", "3 CCP"],
+			"fields": [
+				{
+					"label": "Objectifs",
+					"full": true,
+					"html": "Accompagner à domicile les personnes âgées, en situation de handicap ou les familles : entretien du logement et du linge, préparation des repas, aide aux courses, aide à la toilette et garde d'enfants."
+				},
+				{
+					"label": "Public visé",
+					"html": "Reconversion, demandeurs d'emploi, personnes attirées par l'aide à domicile."
+				},
+				{
+					"label": "Prérequis",
+					"html": "Aucun diplôme requis. Entretien de motivation. Permis B + véhicule fortement recommandés pour les interventions à domicile."
+				},
+				{
+					"label": "Durée &amp; rythme",
+					"html": "Pas de durée nationale imposée. Selon le parcours, généralement 400 à 720 h en centre + période en entreprise (par ex. 441 h en centre + 280 h de stage, soit ≈ 721 h). Sessions plusieurs fois par an."
+				},
+				{
+					"label": "Modalités pédagogiques",
+					"html": "Présentiel, gestes techniques en plateau, mises en situation, période en entreprise."
+				},
+				{
+					"label": "Modalités &amp; délais d'accès",
+					"html": "Inscription sur dossier + entretien, jusqu'à <span class=\"ph\">[X]</span> jours avant le démarrage."
+				},
+				{
+					"label": "Évaluation &amp; validation",
+					"html": "Titre professionnel du Ministère du Travail, composé de 3 CCP pouvant être validés indépendamment."
+				},
+				{
+					"label": "Débouchés &amp; suites de parcours",
+					"html": "Auxiliaire de vie, aide à domicile, garde d'enfants. Poursuite possible vers le DEAES ou le DE Aide-soignant."
+				},
+				{
+					"label": "Tarif &amp; financement",
+					"html": "Sur devis. Éligible CPF, France Travail, OPCO, Région, financement employeur ou personnel."
+				},
+				{
+					"label": "Accessibilité handicap",
+					"html": "Étude personnalisée des besoins avec notre référent handicap : <span class=\"ph\">[contact]</span>."
+				},
+				{
+					"label": "Certification &amp; enregistrement RNCP",
+					"full": true,
+					"html": "<strong>RNCP 37715</strong> · Niveau 3 · Code NSF 330t · Certificateur : Ministère du travail · 3 CCP (blocs) · Certificat SST ou APS-ASD requis lors de l'examen · Échéance le 05/07/2028 (arrêté du 05/05/2023)."
+				}
+			],
+			"footnote": "Indicateurs de résultats de la session <span class=\"ph\">[année]</span>, mis à jour chaque année."
+		},
+		{
+			"id": "asms",
+			"rncp": "41365",
+			"rncpUrl": "https://www.francecompetences.fr/recherche/rncp/41365/",
+			"tabDomain": "Grand âge",
+			"tabLabel": "Titre Pro ASMS",
+			"domain": "Grand âge",
+			"title": "Titre Pro — Agent de Service Médico-Social",
+			"meta": ["Titre professionnel", "Niveau 3", "RNCP 41365", "3 CCP"],
+			"fields": [
+				{
+					"label": "Objectifs",
+					"full": true,
+					"html": "Assurer le nettoyage et le bionettoyage des locaux en établissement de santé ou médico-social, contribuer aux prestations hôtelières (repas, linge) et accompagner le résident dans les gestes du quotidien, en lien avec l'équipe soignante."
+				},
+				{
+					"label": "Public visé",
+					"html": "Reconversion, demandeurs d'emploi, personnes souhaitant travailler en EHPAD ou en établissement de santé."
+				},
+				{
+					"label": "Prérequis",
+					"html": "Aucun diplôme requis. Entretien de motivation. Aptitude au travail en équipe et au contact avec les personnes âgées."
+				},
+				{
+					"label": "Durée &amp; rythme",
+					"html": "Selon le parcours : d'environ 525 h (≈ 315 h en centre + 210 h de stage, ~3,5 mois) à ≈ 760 h (~5 mois), en alternance centre / établissement."
+				},
+				{
+					"label": "Modalités pédagogiques",
+					"html": "Présentiel, protocoles d'hygiène en plateau technique, période en établissement."
+				},
+				{
+					"label": "Modalités &amp; délais d'accès",
+					"html": "Inscription sur dossier + entretien, jusqu'à <span class=\"ph\">[X]</span> jours avant le démarrage."
+				},
+				{
+					"label": "Évaluation &amp; validation",
+					"html": "Titre professionnel du Ministère du Travail, validable par blocs de compétences (CCP)."
+				},
+				{
+					"label": "Débouchés &amp; suites de parcours",
+					"html": "Agent de service en EHPAD, établissement de santé, structure médico-sociale. Poursuite vers le DE Aide-soignant."
+				},
+				{
+					"label": "Tarif &amp; financement",
+					"html": "Sur devis. Éligible CPF, France Travail, OPCO, Région, financement employeur ou personnel."
+				},
+				{
+					"label": "Accessibilité handicap",
+					"html": "Parcours adaptable, référent handicap : <span class=\"ph\">[contact]</span>."
+				},
+				{
+					"label": "Certification &amp; enregistrement RNCP",
+					"full": true,
+					"html": "<strong>RNCP 41365</strong> (titre actuel ; remplace le RNCP 35028, échu le 05/10/2025) · Niveau 3 · Codes NSF 343t, 330, 334t · Certificateur : Ministère du travail · 3 CCP (blocs) · Arrêté de création du 10/07/2020."
+				}
+			],
+			"footnote": "Indicateurs de résultats de la session <span class=\"ph\">[année]</span>, mis à jour chaque année."
+		}
+	]
+}

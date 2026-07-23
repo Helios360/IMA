@@ -124,6 +124,25 @@ n'a pas de backend : la soumission affiche un message de confirmation côté cli
 Un commentaire dans le composant indique où brancher un envoi réel (e-mail, API ou
 service de formulaire type Formspree) le moment venu.
 
+## Docker
+
+Image multi-stage : **Bun** compile le site statique, puis **nginx** le sert.
+Seul le résultat du build se retrouve dans l'image finale (légère).
+
+```bash
+# Build + run via docker compose (→ http://localhost:8080)
+docker compose up --build
+
+# …ou en commandes Docker directes
+docker build -t ima-site .
+docker run --rm -p 8080:80 ima-site
+```
+
+Fichiers concernés : [`Dockerfile`](Dockerfile), [`nginx.conf`](nginx.conf),
+[`.dockerignore`](.dockerignore), [`docker-compose.yml`](docker-compose.yml).
+La config nginx sert les URLs en dossiers (`trailingSlash 'always'`) et met en cache
+longue durée les assets hashés de `/_app/immutable/`.
+
 ## Déploiement
 
 `bun run build` génère un dossier `build/` prêt à être servi par n'importe quel

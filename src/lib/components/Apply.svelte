@@ -1,9 +1,14 @@
 <script lang="ts">
 	import { site } from '$lib/data/site';
 
-	let submitted = $state(false);
+	// Clé publique Web3Forms : reçoit les candidatures et les transmet par e-mail.
+	const WEB3FORMS_KEY = 'ccddb966-f409-4e0c-bd93-975ff61fe3e3';
 
-	// Champs du formulaire (aucun backend : la soumission reste côté client).
+	let submitted = $state(false);
+	let sending = $state(false);
+	let errorMsg = $state('');
+
+	// Champs du formulaire, liés à l'état ; envoyés à Web3Forms à la soumission.
 	let form = $state({
 		nom: '',
 		tel: '',
@@ -13,10 +18,44 @@
 		msg: ''
 	});
 
-	function handleSubmit(event: SubmitEvent) {
+	// Honeypot : rempli uniquement par les robots → on rejette la soumission.
+	let botcheck = $state(false);
+
+	async function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
-		// Ici, brancher un envoi réel (e-mail, API, service de formulaire) si besoin.
-		submitted = true;
+		if (sending) return;
+		sending = true;
+		errorMsg = '';
+
+		try {
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+				body: JSON.stringify({
+					access_key: WEB3FORMS_KEY,
+					subject: `Nouvelle candidature — ${form.nom || 'Site IMA'}`,
+					from_name: 'Site IMA',
+					botcheck,
+					'Nom et prénom': form.nom,
+					Téléphone: form.tel,
+					'Formation visée': form.formation,
+					'Campus souhaité': form.ville,
+					'Permis B + véhicule': form.permis,
+					Message: form.msg || '—'
+				})
+			});
+
+			const data = await response.json();
+			if (response.ok && data.success) {
+				submitted = true;
+			} else {
+				errorMsg = data.message || 'Une erreur est survenue. Merci de réessayer.';
+			}
+		} catch {
+			errorMsg = 'Connexion impossible. Vérifiez votre réseau, puis réessayez.';
+		} finally {
+			sending = false;
+		}
 	}
 </script>
 
@@ -64,6 +103,15 @@
 			{#if !submitted}
 				<form onsubmit={handleSubmit}>
 					<h3>Je veux en savoir plus</h3>
+					<!-- Honeypot anti-spam : masqué aux visiteurs, ignoré des lecteurs d'écran. -->
+					<input
+						type="checkbox"
+						tabindex="-1"
+						autocomplete="off"
+						aria-hidden="true"
+						class="honeypot"
+						bind:checked={botcheck}
+					/>
 					<div class="field">
 						<label for="nom">Nom et prénom</label>
 						<input id="nom" type="text" required placeholder="Votre nom" bind:value={form.nom} />
@@ -113,7 +161,12 @@
 						<textarea id="msg" placeholder="Parlez-nous de votre projet…" bind:value={form.msg}
 						></textarea>
 					</div>
-					<button class="btn btn--gold" type="submit">Envoyer ma demande</button>
+					<button class="btn btn--gold" type="submit" disabled={sending}>
+						{sending ? 'Envoi en cours…' : 'Envoyer ma demande'}
+					</button>
+					{#if errorMsg}
+						<p class="form__error" role="alert">{errorMsg}</p>
+					{/if}
 					<p class="form__note">
 						En envoyant ce formulaire, vous acceptez d'être recontacté·e par l'IMA.
 					</p>
@@ -224,6 +277,23 @@
 	.form :global(.btn--gold) {
 		width: 100%;
 		margin-top: 0.3rem;
+	}
+	.form :global(.btn--gold:disabled) {
+		opacity: 0.65;
+		cursor: not-allowed;
+	}
+	.honeypot {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+	}
+	.form__error {
+		font-size: 0.83rem;
+		color: #b3261e;
+		margin-top: 0.7rem;
+		text-align: center;
 	}
 	.form__note {
 		font-size: 0.77rem;

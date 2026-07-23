@@ -4,5 +4,5 @@ services:
     image: ima-site
     container_name: ima-site
     ports:
-      - "8080:80"
+      - "8085:80"
     restart: unless-stopped
